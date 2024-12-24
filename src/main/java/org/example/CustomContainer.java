@@ -55,4 +55,21 @@ public class CustomContainer<T> {
         }
         return (T) elements[index];
     }
+
+    /**
+     * Удаляет элемент по указанному индексу.
+     *
+     * @param index Индекс элемента, который нужно удалить.
+     * @throws IndexOutOfBoundsException Если индекс вне допустимого диапазона.
+     */
+    public void delete(int index) {
+        if (index < 0 || index >= currentSize) {
+            throw new IndexOutOfBoundsException("Index Out Of Bounds");
+        }
+        for (int i = index; i < currentSize - 1; i++) {
+            elements[i] = elements[i + 1];
+        }
+        elements[currentSize - 1] = null;
+        currentSize--;
+    }
 }

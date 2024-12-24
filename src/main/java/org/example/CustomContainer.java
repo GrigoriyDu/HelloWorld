@@ -72,4 +72,13 @@ public class CustomContainer<T> {
         elements[currentSize - 1] = null;
         currentSize--;
     }
+
+    /**
+     * Возвращает текущий размер контейнера (количество элементов в контейнере).
+     *
+     * @return Текущий размер контейнера.
+     */
+    public int getSize() {
+        return currentSize;
+    }
 }

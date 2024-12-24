@@ -40,4 +40,19 @@ public class CustomContainer<T> {
         System.arraycopy(elements, 0, newElements, 0, currentSize);
         elements = newElements;
     }
+
+    /**
+     * Возвращает элемент по указанному индексу.
+     *
+     * @param index Индекс элемента, который нужно получить.
+     * @return Элемент по указанному индексу.
+     * @throws IndexOutOfBoundsException Если индекс вне допустимого диапазона.
+     */
+    @SuppressWarnings("unchecked")
+    public T retrieve(int index) {
+        if (index < 0 || index >= currentSize) {
+            throw new IndexOutOfBoundsException("Index Out Of Bounds");
+        }
+        return (T) elements[index];
+    }
 }

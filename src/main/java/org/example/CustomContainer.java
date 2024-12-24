@@ -85,7 +85,7 @@ public class CustomContainer<T> {
     /**
      * Отображает все элементы контейнера в консоли.
      */
-    public void displayElements() {
+    public void displayElements(){
         System.out.print("Элементы контейнера: ");
         for (int i = 0; i < currentSize; i++) {
             System.out.print(elements[i] + " ");
